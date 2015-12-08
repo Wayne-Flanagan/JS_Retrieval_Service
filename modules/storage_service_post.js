@@ -6,7 +6,7 @@ jsonFile = require('../deals.json');
 ss_post = function(url, data, searchTerm, cb){
 	var stringifiedData = JSON.stringify(jsonFile);
 	var date = fetchStamp();
-	var obj = {searchTerm: searchTerm, date: date, jsonResult: jsonFile};
+	var obj = {searchTerm: searchTerm, date: date, jsonResult: stringifiedData};
 	return request({
 		method: 'POST',
 		uri: url,
