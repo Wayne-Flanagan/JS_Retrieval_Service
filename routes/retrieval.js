@@ -12,6 +12,7 @@ var storage_post = require('../modules/storage_service_post.js');
 
 var generateUrl = require('../modules/url_generator.js');
 
+var deals = require('../deals.json');
 
 /* Service accepts a GET request. */
 router.get('/', function(req, res, next) {
@@ -32,7 +33,7 @@ router.get('/', function(req, res, next) {
 			}
 		});
 		// Return the JSON Data from Groupon API to the Diplay Service
-		res.json(resp);
+		res.json(deals);
 	})
 
 });
