@@ -1,0 +1,11 @@
+{
+  "groupon":
+    {
+    "url": "http://api.groupon.com/v2/deals.json?",
+    "client_id": "d06a93eb3d058ea36f8a8b6d614780df8a89c6fc"
+    },
+  "storage_service":
+    {
+    "url": "http://localhost:8080/Storage/s3"
+    }
+}
