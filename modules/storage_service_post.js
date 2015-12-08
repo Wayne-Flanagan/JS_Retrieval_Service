@@ -1,6 +1,6 @@
 request = require('request');
 fetchStamp = require('./timestamp_fetcher.js');
-jsonFile = require('../deal.json');
+jsonFile = require('../deals.json');
 
 // Function to handle POST to Storage Service
 ss_post = function(url, data, searchTerm, cb){
