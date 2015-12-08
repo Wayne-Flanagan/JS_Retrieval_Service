@@ -6,6 +6,6 @@
     },
   "storage_service":
     {
-    "url": "http://localhost:8080/Storage/s3"
+    "url": "http://ec2-54-154-230-118.eu-west-1.compute.amazonaws.com:8080/Storage/s3"
     }
 }
