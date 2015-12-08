@@ -21,7 +21,7 @@ router.get('/', function(req, res, next) {
 	var grpn_params = {};
 	grpn_params.channel_id = req.query.channel;
 	grpn_params.division_id = req.query.division;
-	var searchTerm = 'channel_id = ' + grpn_params.channel_id + 'division_id = ' + grpn_params.division_id;
+	var searchTerm = 'channel_id = ' + grpn_params.channel_id + ' division_id = ' + grpn_params.division_id;
 	// Delegate Groupon API query to independent module that uses Node "Request" module to handle HTTP GET request
 	grouponQuery(url_string, grpn_params, function(err, resp){
 		// Delegate Storage query to independent module that uses Node "Request" module to handle HTTP POST request

@@ -1,11 +1,12 @@
 request = require('request');
 fetchStamp = require('./timestamp_fetcher.js');
+jsonFile = require('../deal.json');
 
 // Function to handle POST to Storage Service
 ss_post = function(url, data, searchTerm, cb){
 	var stringifiedData = JSON.stringify(data);
 	var date = fetchStamp();
-	var obj = {searchTerm: searchTerm, date: date, jsonResult: stringifiedData};
+	var obj = {searchTerm: searchTerm, date: date, jsonResult: jsonFile};
 	return request({
 		method: 'POST',
 		uri: url,
