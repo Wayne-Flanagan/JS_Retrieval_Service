@@ -4,13 +4,11 @@ var router = express.Router();
 var config = require('../config.json');
 var g_url = config.groupon.url;
 var client_id = config.groupon.client_id;
-var url_string = g_url + g_url + 'client_id=' + client_id;
+var url_string = g_url + 'client_id=' + client_id;
 var grouponQuery = require('../modules/groupon_query.js');
 
 var storage_service_url = config.storage_service.url;
 var storage_post = require('../modules/storage_service_post.js');
-
-var generateUrl = require('../modules/url_generator.js');
 
 var deals = require('../deals.json');
 
@@ -33,7 +31,7 @@ router.get('/', function(req, res, next) {
 			}
 		});
 		// Return the JSON Data from Groupon API to the Diplay Service
-		res.json(deals);
+		res.json(resp);
 	})
 
 });
