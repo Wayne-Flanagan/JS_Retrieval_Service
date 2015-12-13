@@ -30,6 +30,12 @@ router.get('/', function(req, res, next) {
 				console.log(resp);
 			}
 		});
+		for(var i = 0; i < resp.deals.length; i++){
+			if(resp.deals[i].expiresInDays == null){
+				resp.deals[i].expiresInDays = Math.floor((Math.random() * 10) + 1);
+			}
+
+		}
 		// Return the JSON Data from Groupon API to the Diplay Service
 		res.json(resp);
 	})
