@@ -30,11 +30,10 @@ router.get('/', function(req, res, next) {
 				console.log(resp);
 			}
 		});
-		for(var i = 0; i < resp.deals.length; i++){
-			if(resp.deals[i].expiresInDays == null){
-				resp.deals[i].expiresInDays = Math.floor((Math.random() * 10) + 1);
+		for(var i = 0; i < 5; i++){
+			if(resp.deals[i].options[0].expiresInDays == null){
+				resp.deals[i].options[0].expiresInDays = Math.floor((Math.random() * 15 - 1)) + 1;
 			}
-
 		}
 		// Return the JSON Data from Groupon API to the Diplay Service
 		res.json(resp);
